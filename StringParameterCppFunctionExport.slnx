@@ -1,0 +1,10 @@
+<Solution>
+  <Configurations>
+    <Platform Name="x64" />
+  </Configurations>
+  <Project Path="Dll1/Dll1.vcxproj" Id="68020af8-6328-457e-84ef-01221bb0c433" />
+  <Project Path="StringParameterCppFunctionExport/StringParameterCppFunctionExport.csproj">
+    <Platform Project="x64" />
+    <Build Solution="Release|*" Project="false" />
+  </Project>
+</Solution>
