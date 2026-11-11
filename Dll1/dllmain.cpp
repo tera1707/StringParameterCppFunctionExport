@@ -2,6 +2,7 @@
 #include "pch.h"
 #include "Dll1.h"
 #include <wchar.h>
+#include <string>
 
 extern "C" __declspec(dllexport) BOOL __stdcall IsStringLengthAtLeast10(const wchar_t* str)
 {
@@ -11,6 +12,17 @@ extern "C" __declspec(dllexport) BOOL __stdcall IsStringLengthAtLeast10(const wc
     }
 
     return (wcslen(str) >= 10) ? TRUE : FALSE;
+}
+
+extern "C" __declspec(dllexport) void __stdcall GetNativeMessage(wchar_t* buffer, int bufferSize)
+{
+    if (buffer == nullptr || bufferSize <= 0)
+    {
+        return;
+    }
+
+    std::wstring message = L"Hello from C++";
+    wcsncpy_s(buffer, bufferSize, message.c_str(), _TRUNCATE);
 }
 
 BOOL APIENTRY DllMain(

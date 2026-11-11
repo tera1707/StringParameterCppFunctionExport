@@ -2,6 +2,10 @@
   <Configurations>
     <Platform Name="x64" />
   </Configurations>
+  <Folder Name="/ソリューション項目/">
+    <File Path=".gitignore" />
+    <File Path="README.md" />
+  </Folder>
   <Project Path="Dll1/Dll1.vcxproj" Id="68020af8-6328-457e-84ef-01221bb0c433" />
   <Project Path="StringParameterCppFunctionExport/StringParameterCppFunctionExport.csproj">
     <Platform Project="x64" />
